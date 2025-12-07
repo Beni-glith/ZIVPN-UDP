@@ -12,7 +12,7 @@ LIGHT_GREEN='\033[1;32m'
 NC='\033[0m' # No Color
 
 # --- License Info ---
-LICENSE_URL="https://raw.githubusercontent.com/kedaivpn/izin/main/licence"
+LICENSE_URL="https://raw.githubusercontent.com/Beni-glith/izin/main/licence"
 LICENSE_INFO_FILE="/etc/zivpn/.license_info"
 
 # --- Pre-flight Checks ---
@@ -779,7 +779,7 @@ function run_setup() {
 
     # --- Run Base Installation ---
     echo "--- Starting Base Installation ---"
-    wget -O zi.sh https://raw.githubusercontent.com/kedaivpn/udp-zivpn/main/zi.sh
+    wget -O zi.sh https://raw.githubusercontent.com/Beni-glith/ZIVPN-UDP/main/zi.sh
     if [ $? -ne 0 ]; then echo "Failed to download base installer. Aborting."; exit 1; fi
     chmod +x zi.sh
     ./zi.sh
@@ -814,7 +814,7 @@ function run_setup() {
     
     # Download helper script from repository
     echo "Downloading helper script..."
-    wget -O /usr/local/bin/zivpn_helper.sh https://raw.githubusercontent.com/kedaivpn/udp-zivpn/main/zivpn_helper.sh
+    wget -O /usr/local/bin/zivpn_helper.sh https://raw.githubusercontent.com/Beni-glith/ZIVPN-UDP/main/zivpn_helper.sh
     if [ $? -ne 0 ]; then
         echo "Failed to download helper script. Aborting."
         exit 1
@@ -877,7 +877,7 @@ EOF
 # This script is run by a cron job to periodically check the license status.
 
 # --- Configuration ---
-LICENSE_URL="https://raw.githubusercontent.com/kedaivpn/izin/main/licence"
+LICENSE_URL="https://raw.githubusercontent.com/Beni-glith/izin/main/licence"
 LICENSE_INFO_FILE="/etc/zivpn/.license_info"
 EXPIRED_LOCK_FILE="/etc/zivpn/.expired"
 TELEGRAM_CONF="/etc/zivpn/telegram.conf"
